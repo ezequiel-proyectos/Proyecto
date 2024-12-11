@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-inventario {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.encabezado-inventario {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f3f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.encabezado-inventario button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.encabezado-inventario button:hover {
+    background-color: #5a6268;
+}
+
+.encabezado-inventario span {
+    font-weight: bold;
+    margin-right: auto;
+    font-size: 1.1em;
+}
+
+.acciones button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+.acciones button:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #0056b3;
+}
+
+.tabla-reposicion {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-reposicion thead {
+    background-color: #e9ecef;
+}
+
+.tabla-reposicion th,
+.tabla-reposicion td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-reposicion th {
+    font-weight: bold;
+}
+
+.tabla-reposicion tr:nth-child(even) {
+    background-color: #f8f9fa;
+    transition: ease-in-out 0.2s;
+}
+.tabla-reposicion tr:nth-child(even):hover {
+    background-color: #b7c3ce;
+    transition: ease-in-out 0.2s;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+    transition: ease-in-out 0.2s;
+}
+tbody tr:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #b7c3ce;
+}
+.tabla-reposicion td button {
+    margin-right: 5px;
+    padding: 3px 8px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.tabla-reposicion td button:hover{
+    background-color: #138496;
+    transition: ease-in-out 0.3s;
+}
+.tabla-reposicion td button:nth-child(2) {
+    background-color: #28a745;
+    transition: ease-in-out 0.3s;
+}
+.tabla-reposicion td button:nth-child(2):hover{
+    background-color: #218838;
+    transition: ease-in-out 0.3s;
+}
+
+.tabla-reposicion td button:nth-child(3) {
+    background-color: #ffc107;
+    transition: ease-in-out 0.3s;
+}
+.tabla-reposicion td button:nth-child(3):hover{
+    background-color: #d39e00;
+    transition: ease-in-out 0.3s;
+}

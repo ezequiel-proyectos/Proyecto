@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    width: 35vw;
+    height: 100vh;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+
+    padding: 1em;
+    padding-top: 5em;
+}
+.login .login_img{
+    width: 15em;
+    height: 4em;
+
+    background-image: url(../images/LOGO-UPV-MODIFICADO-3-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.imagen{
+    width: 75vw;
+    height: 100vh;
+
+    background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5),rgb(0,0,0,.5)),url(../images/449408767_884837733454174_2635487310082067855_n.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title{
+    font-size: 1.5em;
+}
+.div_box{
+    width: 80%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5em;
+}
+.div_box .input_box{
+    width: 100%;
+
+    border: .1em solid #D2D2D2;
+
+    padding: .5em;
+    border-radius: .2em;
+}
+.button_box{
+    width: 80%;
+
+    padding: .7em;
+    margin-top: 1em;
+
+    background-color: #38bc9f;
+    color: #fff;
+    border-radius: .3em;
+}

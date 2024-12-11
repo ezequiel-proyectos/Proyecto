@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="../CSS/ordenar.css">
+
+<form action="../bd/procesar_orden.php" method="POST">
+  <div class="form-group">
+    <label for="categoria">Categoría</label>
+    <select id="categoria" name="categoria" required>
+      <option value="">Selecciona una categoría</option>
+      <option value="almacen">Almacén</option>
+      <option value="proveedor">Proveedor</option>
+      <option value="tienda1">Tienda 1</option>
+      <option value="tienda2">Tienda 2</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="productos">Producto</label>
+    <select id="productos" name="nombre_producto" required>
+      <option value="">Selecciona un producto</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Cantidad</label>
+    <input type="number" id="lastName" name="cantidad" placeholder="min:1" min="1" required>
+  </div>
+  <div class="form-group">
+    <label for="city">Ubicación salida</label>
+    <input type="text" id="city" name="ubicacion_salida" placeholder="México" required>
+  </div>
+  <div class="form-group">
+    <label for="state">Ubicación entrega</label>
+    <input type="text" id="cd" name="ubicacion_entrega" placeholder="CD Victoria" required>
+  </div>
+  <div class="form-group">
+    <label for="zip">Código postal</label>
+    <input type="text" id="zip" name="codigo_postal" placeholder="Zip" required>
+  </div>
+  <button type="submit">Enviar orden</button>
+  <button type="button" onclick="window.location.href='../bd/inventario.php'">Cancelar orden</button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const categoriaSelect = document.getElementById("categoria");
+    const productosSelect = document.getElementById("productos");
+
+    categoriaSelect.addEventListener("change", function () {
+      const categoria = categoriaSelect.value;
+
+      if (categoria) {
+        fetch(`../bd/obtener_productos.php?categoria=${categoria}`)
+          .then(response => response.json())
+          .then(data => {
+            productosSelect.innerHTML = '<option value="">Selecciona un producto</option>';
+            if (data.length > 0) {
+              data.forEach(producto => {
+                const option = document.createElement("option");
+                option.value = producto.nombre;
+                option.textContent = producto.nombre + ` (Stock: ${producto.cantidad})`;
+                productosSelect.appendChild(option);
+              });
+            } else {
+              const option = document.createElement("option");
+              option.value = "";
+              option.textContent = "No hay productos en esta categoría";
+              productosSelect.appendChild(option);
+            }
+          })
+          .catch(error => {
+            console.error("Error al cargar los productos:", error);
+          });
+      } else {
+        productosSelect.innerHTML = '<option value="">Selecciona un producto</option>';
+      }
+    });
+  });
+</script>

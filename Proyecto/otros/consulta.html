@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta - Inventario</title>
+  <link rel="stylesheet" href="../css/estilo_consulta.css">
+  <link rel="stylesheet" href="../css/index_new.css">
+</head>
+<body>
+  <div class="page_label" id="fecha">
+        
+  </div>
+  <div class="nav1">
+      <div class="box">
+          <a href="../inventario/inventario.php">Productos</a>
+          <a href="../otros/recursos.html">Recursos</a>
+      </div>
+      <div class="box">
+          <button onclick="window.location.href='../inicio/cerrar_log.php'">
+              Cerrar sesion
+          </button>
+      </div>
+  </div>
+
+  <div class="nav2">
+   <button onclick="window.location.href='../inventario/inventario.php'">Inventario</button>  
+   <button onclick="window.location.href='../otros/servicios.html'">Servicios</button>
+   <button onclick="window.location.href='../otros/consulta.html'">Consulta</button>
+ </div>
+  <main class="main-content">
+    <section class="hero">
+      <h1>Contacto y Capacitación</h1>
+      <p>Nosotros, como equipo, estamos capacitados para atender sus dudas o sugerencias respecto a este programa de registro de inventarios. Nuestro objetivo es proporcionar un sistema eficiente y confiable para optimizar sus procesos.</p>
+    </section>
+    <section class="team-info">
+      <h2>Información de Contacto</h2>
+      <p><strong>Equipo:</strong> Emiliano Vargas, Cristian Gael, Ezequiel Torres, Javier Emiliano, Ezequiel Torres Desilos</p>
+      <p><strong>Teléfono:</strong> 834 268 7928</p>
+      <p><strong>Correo:</strong> 2330044@upv.edu.mx</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Inventario. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    const fechaActual = new Date();
+
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+
+    document.getElementById('fecha').textContent = `${fechaFormateada}`;
+</script>
+</body>
+</html>

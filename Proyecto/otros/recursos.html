@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index_new.css">
+    <link rel="stylesheet" href="../css/rec.css">
+</head>
+<body>
+    <div class="page_label" id="fecha">
+        
+    </div>
+    <div class="nav1">
+        <div class="box">
+            <a href="../inventario/inventario.php">Productos</a>
+            <a href="../otros/recursos.html">Recursos</a>
+        </div>
+        <div class="box">
+            <button onclick="window.location.href='../inicio/cerrar_log.php'">
+                Cerrar sesion
+            </button>
+        </div>
+    </div>
+
+    <div class="nav2">
+     <button onclick="window.location.href='../inventario/inventario.php'">Inventario</button>  
+     <button onclick="window.location.href='../otros/servicios.html'">Servicios</button>
+     <button onclick="window.location.href='../otros/consulta.html'">Consulta</button>
+   </div>
+<div class="box2">
+    <div class="container">
+        <h1>Herramientas</h1>
+        <p>Las herramientas que utilizamos fueron</p>
+        <div class="con">
+            <div>
+                <p><b>Visual Studio</b></p>
+                <img src="IMG/Visual_Studio_Code_1.35_icon.svg_-removebg-preview.png" alt="" style="width: 100px;"> 
+            </div>
+            <div>
+                <p><b>XAMPP</b></p>
+                <img src="IMG/Xampp3.0.jpg" alt="" style="width: 100px;">
+            </div>
+        </div>
+        
+        <div class="con">
+            <div>
+                <p><b>PhpMyAdmin</b></p>
+                <img src="IMG/png-transparent-phpmyadmin-logo-removebg-preview.png" alt="" style="width: 100px;"> 
+            </div>
+            <div>
+                <p><b>Voiceflow</b></p>
+                <img src="IMG/Voiceflow.png" alt="" style="width: 100px;">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="container">
+        <h1>Programas</h1>
+        <p>Los Programas que utilizamos fueron</p>
+        <div class="con">
+            <div>
+                <p><b>PHP</b></p>
+                <img src="IMG/PHP-removebg-preview.png" alt="" style="width: 100px;">
+            </div>
+            <div>
+                <p><b>HTML</b></p>
+                <img src="IMG/HTML.jpg" alt="" style="width: 100px;">
+            </div>
+        </div>
+        <div class="con">
+            <div>
+                <p><b>CSS</b></p>
+                <img src="IMG/CSS.jpg" alt="" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const fechaActual = new Date();
+
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+
+    document.getElementById('fecha').textContent = `${fechaFormateada}`;
+</script>
+</body>
+</html>

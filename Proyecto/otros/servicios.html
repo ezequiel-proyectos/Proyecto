@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Inventario</title>
+  <link rel="stylesheet" href="../css/estilo_consulta.css">
+  <link rel="stylesheet" href="../css/index_new.css">
+</head>
+<body>
+  
+  <div class="page_label" id="fecha">
+        
+  </div>
+  <div class="nav1">
+      <div class="box">
+          <a href="../inventario/inventario.php">Productos</a>
+          <a href="../otros/recursos.html">Recursos</a>
+      </div>
+      <div class="box">
+          <button onclick="window.location.href='../inicio/cerrar_log.php'">
+              Cerrar sesion
+          </button>
+      </div>
+  </div>
+
+  <div class="nav2">
+   <button onclick="window.location.href='../inventario/inventario.php'">Inventario</button>  
+   <button onclick="window.location.href='../otros/servicios.html'">Servicios</button>
+   <button onclick="window.location.href='../otros/consulta.html'">Consulta</button>
+ </div>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Nuestros Servicios</h1>
+      <p>Ofrecemos soluciones innovadoras para optimizar la gestión de inventarios. Nuestro enfoque está en brindar herramientas eficientes y un soporte técnico confiable.</p>
+    </section>
+    <section class="services">
+      <div class="service">
+        <h2>Gestión Eficiente</h2>
+        <p>Administra tu inventario con registros precisos, actualización en tiempo real y control total de tus productos.</p>
+      </div>
+      <div class="service">
+        <h2>Reportes Analíticos</h2>
+        <p>Genera informes personalizados que te ayudarán a tomar decisiones estratégicas basadas en datos.</p>
+      </div>
+      <div class="service">
+        <h2>Soporte Técnico</h2>
+        <p>Accede a asistencia profesional para resolver dudas o problemas relacionados con el sistema.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Inventario. Todos los derechos reservados.</p>
+  </footer>
+
+
+  <script>
+    const fechaActual = new Date();
+
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+
+    document.getElementById('fecha').textContent = `${fechaFormateada}`;
+</script>
+
+</body>
+</html>
